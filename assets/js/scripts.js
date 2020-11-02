@@ -46,29 +46,31 @@ placesToGo.addPlace(LosAngeles);
 $(document).ready(function () {
   $("span#ID").click(function () {
     //placesToGo.printProperties(placesToGo.places[0]);
-    $("#IDProperties").append("You could go there for:" + "<li>" + placesToGo.places[0].landmarks + "</li>");
-    $("#IDProperties").append("The best time of year for that:" + "<li>" + placesToGo.places[0].timeOfYear + "</li>");
-    $("#IDProperties").append("<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[0].notes + "</li>");
+    $("#IDProperties").append("You could go there for:" + "<li>" + placesToGo.places[0].landmarks + "</li>" + "The best time of year for that:" + "<li>" + placesToGo.places[0].timeOfYear + "</li>" + "<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[0].notes + "</li>");
+    $("#COProperties").text("");
+    $("#NYProperties").text("");
+    $("#LAProperties").text("");  
   });
   
   $("span#CO").click(function () {
-    $("#COProperties").append("You could go there for:" + "<li>" + placesToGo.places[1].landmarks + "</li>");
-    $("#COProperties").append("The best time of year for that:" + "<li>" + placesToGo.places[1].timeOfYear + "</li>");
-    $("#COProperties").append("<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[1].notes + "</li>");
+    $("#COProperties").append("You could go there for:" + "<li>" + placesToGo.places[1].landmarks + "</li>" + "The best time of year for that:" + "<li>" + placesToGo.places[1].timeOfYear + "</li>" + "<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[1].notes + "</li>");
+    $("#IDProperties").text("");
+    $("#NYProperties").text("");
+    $("#LAProperties").text(""); 
   });
   
 
   $("span#NY").click(function () {
-    $("#NYProperties").append("You could go there for:" + "<li>" + placesToGo.places[2].landmarks + "</li>");
-    $("#NYProperties").append("The best time of year for that:" + "<li>" + placesToGo.places[2].timeOfYear + "</li>");
-    $("#NYProperties").append("<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[2].notes + "</li>");
+    $("#NYProperties").append("You could go there for:" + "<li>" + placesToGo.places[2].landmarks + "</li>" + "The best time of year for that:" + "<li>" + placesToGo.places[2].timeOfYear + "</li>" + "<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[2].notes + "</li>");
+    $("#COProperties").text("");
+    $("#IDProperties").text("");
+    $("#LAProperties").text(""); 
   });
   
   $("span#LA").click(function () {
-    $("#LAProperties").append("You could go there for:" + "<li>" + placesToGo.places[3].landmarks + "</li>");
-    $("#LAProperties").append("The best time of year for that:" + "<li>" + placesToGo.places[3].timeOfYear + "</li>");
-    $("#LAProperties").append("<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[3].notes + "</li>");
+    $("#LAProperties").append("You could go there for:" + "<li>" + placesToGo.places[3].landmarks + "</li>" + "The best time of year for that:" + "<li>" + placesToGo.places[3].timeOfYear + "</li>" + "<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[3].notes + "</li>");
+    $("#COProperties").text("");
+    $("#NYProperties").text("");
+    $("#IDProperties").text(""); 
   });
-
-  event.preventDefault();
 });
