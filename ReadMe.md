@@ -45,9 +45,15 @@ Describe: Place():
 4. Test: "It returns full description of Place properties"<br>
     Expect: (Idaho).toEqual(("Idaho", ["Hotsprings", "Skiing"], ["Winter", "Fall"], "great place for outdoors");
 
-5. Test: "It returns Place properties in list with a loop"<br>
-    Expect: (Idaho).toEqual(([Idaho, Hotsprings, Skiing, Winter, Fall, great place for outdoors]));
+Describe: addPlace();
 
+1. Test: "It adds object place to array placesToGo.places"<br>
+    Expect: placesToGo.addPlace(Idaho).toEqual(("Idaho", ["Hotsprings", "Skiing"], ["Winter", "Fall"], "great place for outdoors"));
+
+Describe: printProperties();
+
+1. Test: "It will print the properties for each place"
+    Expect: printProperties(Colorado).toEqual("Ouray", "Winter", "great for ice climbing");
 
 
 ## <span style="color:#0ec2b8">Technologies Used</span>
