@@ -10,10 +10,10 @@ function Place(location, landmarks, timeOfYear, notes) {
   this.timeOfYear = timeOfYear;
   this.notes = notes;
 }
-let Idaho = new Place("Idaho", ["Hotsprings", "Skiing"], ["Winter", "Fall"], "great place for outdoors");
-let Colorado = new Place("Colorado", "Ouray", "Winter", "great for ice climbing");
+let Idaho = new Place("Idaho", ["Hotsprings", " Skiing"], ["Winter", " Fall"], "Great place for outdoors");
+let Colorado = new Place("Colorado", "Ouray", "Winter", "Great for ice climbing");
 let NewYork = new Place("NewYork", "Time Square", "Spring", "Best Bagels");
-let LosAngeles = new Place("LosAngeles", "Beach", "Summer", "great place for music scene");
+let LosAngeles = new Place("LosAngeles", "Beach", "Summer", "Great place for music scene");
 
 PlacesToGo.prototype.addPlace = function (place) {
   place.id = this.assignId();
@@ -25,8 +25,8 @@ PlacesToGo.prototype.assignId = function () {
   return this.currentId;
 }
 
-PlacesToGo.prototype.printProperties = function () {
-  this.places.forEach(function (place){
+PlacesToGo.prototype.printProperties = function (places) {
+  this.places.forEach(function (place) {
     console.log(place.landmarks);
     console.log(place.timeOfYear);
     console.log(place.notes);
@@ -39,14 +39,36 @@ placesToGo.addPlace(Idaho);
 placesToGo.addPlace(Colorado);
 placesToGo.addPlace(NewYork);
 placesToGo.addPlace(LosAngeles);
-placesToGo.printProperties();
+//placesToGo.printProperties();
 
 // User interface logic:
 
 $(document).ready(function () {
+  $("span#ID").click(function () {
+    //placesToGo.printProperties(placesToGo.places[0]);
+    $("#IDProperties").append("You could go there for:" + "<li>" + placesToGo.places[0].landmarks + "</li>");
+    $("#IDProperties").append("The best time of year for that:" + "<li>" + placesToGo.places[0].timeOfYear + "</li>");
+    $("#IDProperties").append("<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[0].notes + "</li>");
+  });
+  
+  $("span#CO").click(function () {
+    $("#COProperties").append("You could go there for:" + "<li>" + placesToGo.places[1].landmarks + "</li>");
+    $("#COProperties").append("The best time of year for that:" + "<li>" + placesToGo.places[1].timeOfYear + "</li>");
+    $("#COProperties").append("<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[1].notes + "</li>");
+  });
+  
 
-
+  $("span#NY").click(function () {
+    $("#NYProperties").append("You could go there for:" + "<li>" + placesToGo.places[2].landmarks + "</li>");
+    $("#NYProperties").append("The best time of year for that:" + "<li>" + placesToGo.places[2].timeOfYear + "</li>");
+    $("#NYProperties").append("<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[2].notes + "</li>");
+  });
+  
+  $("span#LA").click(function () {
+    $("#LAProperties").append("You could go there for:" + "<li>" + placesToGo.places[3].landmarks + "</li>");
+    $("#LAProperties").append("The best time of year for that:" + "<li>" + placesToGo.places[3].timeOfYear + "</li>");
+    $("#LAProperties").append("<p>" + "Summary:" + "</p>" + "<li>" + placesToGo.places[3].notes + "</li>");
+  });
 
   event.preventDefault();
-
 });

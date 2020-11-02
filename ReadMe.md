@@ -55,6 +55,12 @@ Describe: printProperties();
 1. Test: "It will print the properties for each place"
     Expect: printProperties(Colorado).toEqual("Ouray", "Winter", "great for ice climbing");
 
+Describe: click();
+
+1. Test: "It will show list of place properties when a user clicks on a specific place"
+    Expect: $("span#CO").click(function ()).toEqual("Ouray", "Winter", "great for ice climbing");
+
+
 
 ## <span style="color:#0ec2b8">Technologies Used</span>
 
