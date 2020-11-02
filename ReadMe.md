@@ -29,6 +29,26 @@ _No known bags_
 
 _If you have any questions, ideas or concerns, please, contact me at [natalindria@gmail.com](mailto:natalindria@gmail.com)_
 
+## <span style="color:#0ec2b8">Specs</span>
+
+Describe: Place():
+
+1. Test: "It returns objects description."<br>
+    Expect: (Idaho).toEqual({location: "Idaho", landmarks: Array(2), timeOfYear: Array(2), notes: "great place for outdoors"});
+
+2. Test: "It returns description of place"<br>
+    Expect: (Idaho.location).toEqual("Idaho");
+
+3. Test: "It returns description of first element of index 1 landmark"<br>
+    Expect: (Idaho.landmarks[1]).toEqual("skiing");
+
+4. Test: "It returns full description of Place properties"<br>
+    Expect: (Idaho).toEqual(("Idaho", ["Hotsprings", "Skiing"], ["Winter", "Fall"], "great place for outdoors");
+
+5. Test: "It returns Place properties in list with a loop"<br>
+    Expect: (Idaho).toEqual(([Idaho, Hotsprings, Skiing, Winter, Fall, great place for outdoors]));
+
+
 
 ## <span style="color:#0ec2b8">Technologies Used</span>
 
